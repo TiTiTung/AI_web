@@ -1,0 +1,381 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Carousel Template · Bootstrap</title>
+
+    <script type="text/javascript" nonce="ea7e781e1f4647a98e1f462ee18" src="//local.adguard.org?ts=1577163447687&amp;type=content-script&amp;dmn=getbootstrap.com&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1"></script>
+<script type="text/javascript" nonce="ea7e781e1f4647a98e1f462ee18" src="//local.adguard.org?ts=1577163447687&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+
+    .title1 {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 400;
+        padding: .5em 0;
+        background-color: #FFEBCD ;
+        margin: 16px;
+        padding: 16px;
+    }
+
+    .title {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+		.row .title::after {
+		    content: "";
+		    display: block;
+		    margin: 10px auto 0 0;
+		    width: 4em;
+		    height: 4px;
+		    background: #EEAD0E;
+		}
+
+    .row h4 {
+      background: #FFEBCD;
+      padding:10px;
+      padding-left: 40px; 
+      padding-right: 40px;
+
+    }
+
+    .title::after {
+        content: "";
+        display: block;
+        margin: 10px auto 0 ;
+        width: 4em;
+        height: 4px;
+        background: #EEAD0E;
+    }
+
+		section {
+		    display: block;
+		    padding: 2rem 0;
+
+		}
+
+
+      *{
+        font-family: 微軟正黑體;
+      }
+
+      h4 {
+      display: block;
+      margin-block-start: 1.33em;
+      margin-block-end: 1.33em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+      text-align: center;
+      }
+
+      .secondboard_padding{
+      padding:10px;
+      padding-left: 40px; 
+      padding-right: 40px;
+
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+
+      a:link {
+        color: #959696;
+      }
+      a:visited {
+        color: #959696;
+      }
+      a:hover {
+        color:#F7984B;
+      }
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  
+  <body>
+   <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light shadow">
+  <a class="navbar-brand" href="https://www.pfcf.com.tw/"><img src="pic/futures_06.png" alt="統一期貨" width="117"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto ">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">首頁 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          期貨看盤室
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!--<a class="dropdown-item" href="./dashboard/technical-analysis.html">**商品櫥窗</a>-->
+          <a class="dropdown-item" href="./dashboard/technical-indicators.html"><img src="pic/icon-01.png"> 多空指標</a>
+          <a class="dropdown-item" href="./dashboard/ai-patterns.html"><img src="pic/icon-02.png"> AI模型</a>
+          <!--<a class="dropdown-item" href="./dashboard/products-screener.html">熱門商品排行</a>-->
+          <a class="dropdown-item" href="./dashboard/trades-screener.html"><img src="pic/icon-03.png"> 漲跌排行</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          數據資料庫
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!--<a class="dropdown-item" href="#">經濟數據</a>-->
+          <!--<a class="dropdown-item" href="#">籌碼資料</a>-->
+          <a class="dropdown-item" href="./ecodatabase/event-calendar.html"><img src="pic/icon-13.png"> 財經日曆</a>
+          <a class="dropdown-item" href="./ecodatabase/event-research.html"><img src="pic/icon-14.png"> 事件分析研究</a>
+          <a class="dropdown-item" href="./ecodatabase/holiday-calendar.html"><img src="pic/icon-05.png"> 假期公告</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./learningmap.html">學習地圖</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">關於我們</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜尋</button>
+    </form>
+  </div>
+</nav>
+  <!-- 導覽列結束 -->
+
+
+<main role="main">
+
+
+    <br><br><br><br><br>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing"> 
+
+    <div class=" text-center">
+      <h3 class="title" style="">平台特色</h3><br>
+    </div>
+
+    <br><br>
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <a href="./dashboard/technical-indicators.html"><img src="worldwide.png" width="90" height="90" style="display:block; margin:auto;"></a>
+        <h4 >總經圖表</h4>
+        <p class="secondboard_padding">視覺化呈現全球經濟的關鍵數據，大幅提升決策效率。</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <a href="./dashboard/ai-patterns.html"><img src="AI_2.png" width="90" height="90" style="display:block; margin:auto;"></a>
+        <h4>AI 型態辨識</h4>
+        <p class="secondboard_padding">利用深度學習演算法，辨識技術指標的多空走勢。</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <a href="./dashboard/trades-screener.html"><img src="candlestick.png" width="90" height="90" style="display:block; margin:auto;"></a>
+        <h4>多空指標</h4>
+        <p class="secondboard_padding">提供擺盪指標與移動平均線，為投資人解析市場動向。</p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+    <br><br>
+
+  </div><!-- /.container -->
+
+
+	<section style="background: #E2E2E2; ">
+	    <div class="container">
+	        <div class="row">
+	            <div  style="padding-left: 90px;" class="col-md-6 pd-t-4 pd-b-2">
+	                <h3 class="title">多空指標建立</h3><br>
+	                <p style="padding-right: 50px;">整理各項重要擺盪指標與移動平均線，包含RSI、威廉指標、KD、MACD，與各期移動平均線
+                 。再以視覺化呈現各項指標目前的總和狀態，協助投資人了解目前市場近況，提升決策效率。</p>
+	                <p class="mg-t-3">
+                    <br>
+                    <button type="button" class="btn btn-warning">前往智能平台</button>
+	                </p>
+	            </div>
+	            <div class="col-md-6">
+	                <a style="padding-left: 90px;"><img src="webindex.png" width="60%" height="400px" ></a>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+	<section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6" >
+                        <a  style="padding-left: 90px;"><img src="webai.png" width="65%" ></a>
+                    </div>
+                    <div class="offset-md-1 col-md-5 pd-t-2 pd-b-2">
+                        <h3 class="title">AI 型態辨識</h3><br>
+                        <p style="padding-right: 40px;">利用深度學習-卷積神經網路技術(Convolutional Neural Networks)訓練歷史資料線圖，自動偵測辨識出目前海內外期貨商品行情正在發生的型態，投資人可依據自身交易風格，選擇有興趣的商品與型態走勢。</p>
+                        <p class="mg-t-3">
+                          <br>
+                          <button type="button" class="btn btn-warning">前往智能平台</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+  <section style="background: #E2E2E2; ">
+      <div class="container">
+          <div class="row">
+              <div  style="padding-left: 90px;" class="col-md-6 pd-t-4 pd-b-2">
+                  <h3 class="title">事件分析研究</h3><br>
+                  <p style="padding-right: 50px;">歸類出國際政經事件在不同時期的進展，並分析其對於全球股市的影響。如中美貿易戰對市場的影響甚鉅，
+                  中美雙方在不同時期的關稅決議，都對美股造成一定程度的影響。但就長期來看，貿易戰打打停停，儼然已成常態性事件。</p>
+                  <p class="mg-t-3">
+                    <br>
+                    <button type="button" class="btn btn-warning">前往智能平台</button>
+                  </p>
+              </div>
+              <div class="col-md-6">
+                  <a ><img src="webevent.png" width="120%" ></a>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a  style="padding-left: 90px;" ><img src="webrank.png" width="70%"></a>
+                    </div>
+                    <div class="offset-md-1 col-md-5 pd-t-2 pd-b-2">
+                        <h3 class="title">國內外期貨商品</h3><br>
+                        <p style="padding-right: 40px;">將指數、匯率、利率、商品、能源、金屬類期貨等大宗商品統整、歸類，並以視覺化方式成列於智慧平台頁面，投資
+                        人能夠快速了解商品的近期走勢，以利後續的投資組合建立。</p>
+                        <p class="mg-t-3">
+                          <br>
+                          <button type="button" class="btn btn-warning">前往智能平台</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- FOOTER -->
+  <footer class="footer mt-auto py-3" style="background-color: #E2E2E2">
+    <div class="container">
+    <div class="row">
+      <div class="col-12 col-md">
+
+        <small class="d-block mb-3" style="color: #959696">統一期貨 © 2019</small>
+        <a href="https://www.facebook.com/president.futures/"><img src="pic/fb.png"></a>
+        <a href="https://line.me/R/ti/p/%40bbu3616b"><img src="pic/line.png"></a>
+        <a href="https://www.youtube.com/channel/UCaJSetiZxHhUdYksIjr-yfw"><img src="pic/youtube.png"></a>
+        <a href="https://www.youtube.com/channel/UCaJSetiZxHhUdYksIjr-yfw"><img src="pic/ig.png"></a>
+      </div>
+      <div class="col-6 col-md">
+        <h5 style="color: #959696">-期貨看盤室-</h5>
+        <ul class="list-unstyled text-small">
+          <!--<li><a class="text-white" href="./dashboard/techanalysis.html">技術線圖</a></li>-->
+          <li><a href="./dashboard/technical-indicators.html"><img src="pic/icon-01.png"> 多空指標</a></li>
+          <li><a href="./dashboard/ai-patterns.html"><img src="pic/icon-02.png"> AI模型</a></li>
+          <!--<li><a class="text-white" href="./dashboard/products-screener.html">熱門商品排行</a></li>-->
+          <li><a href="./dashboard/trades-screener.html"><img src="pic/icon-03.png"> 漲跌排行</a></li>
+
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5 style="color: #959696">-數據資料庫-</h5>
+        <ul class="list-unstyled">
+          <!--<li><a class="text-white" href="#">經濟數據</a></li>-->
+          <!--<li><a class="text-white" href="#">籌碼資料</a></li>-->
+          <li><a href="./ecodatabase/event-calendar.html"><img src="pic/icon-13.png"> 財經日曆</a></li>
+          <li><a href="./ecodatabase/event-research.html"><img src="pic/icon-14.png"> 事件研究分析</a></li>
+          <li><a href="./ecodatabase/holiday-calendar.html"><img src="pic/icon-05.png"> 假期公告</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5 style="color: #959696">-學習地圖-</h5>
+        <ul class="list-unstyled">
+          <li><a href="./learningmap.html"><img src="pic/icon-06.png"> 認識期權</a></li>
+          <li><a href="./learningmap.html"><img src="pic/icon-07.png"> 程式交易介紹</a></li>
+          <li><a href="./learningmap.html"><img src="pic/icon-08.png"> 國際市場分析</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5 style="color: #959696">-關於我們-</h5>
+        <ul class="list-unstyled text-small">
+          <li><a href="#"><img src="pic/icon-09.png"> Team</a></li>
+          <li><a href="#"><img src="pic/icon-10.png"> Locations</a></li>
+          <li><a href="#"><img src="pic/icon-11.png"> Privacy</a></li>
+          <li><a href="#"><img src="pic/icon-12.png"> Terms</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row text-muted">
+    網站內提供之數據資料、分析工具、網誌內容僅供使用者作為參考，實際數據以官方公佈資料為準。任何交易行為須自行判斷並承擔風險，本網站不負擔盈虧之法律責任。歡迎分享本網站提供之資訊連結，如需轉載內容務必經由本公司同意。</div>
+  </div>
+  </footer>
+  <!-- FOOTER結束 -->
+
+
+
+
+
+</main>
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="160字左右內網站描述，***重要!">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>強趨勢-AI型態辨識模型</title><!-- 為每個頁面設定唯一的標題 -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/navbar-fixed/">
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family==Noto+Sans+TC&display=swap">
+    <!-- fontawesome icon -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+    <style>
+          /* 共用css */
+      body{
+        background-color: #FFFAFA;
+        font-family: 'Noto Sans TC regular','Microsoft JhengHei', sans-serif;
+      }
+
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+   
+
+      header {
+              background-color: #666;
+              padding: 30px;
+              text-align: center;
+              font-size: 35px;
+              color: white;
+              }
+    /* 共用css結束 */
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+            a:link {
+        color: #959696;
+      }
+      a:visited {
+        color: #959696;
+      }
+      a:hover {
+        color:#F7984B;
+      }
+
+
+        /* 圓餅圖css */  
+.highcharts-figure, .highcharts-data-table table {
+    min-width: 320px; 
+    max-width: 500px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+  font-family: Verdana, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #EBEBEB;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+  font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+        /* 圓餅圖css結束 */  
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+  </head>
+  <body>
+ <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light shadow">
+  <a class="navbar-brand" href="https://www.pfcf.com.tw/"><img src="../pic/futures_06.png" alt="統一期貨" width="117"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto ">
+      <li class="nav-item active">
+        <a class="nav-link" href="../index.html">首頁 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          期貨看盤室
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!--<a class="dropdown-item" href="./dashboard/technical-analysis.html">**商品櫥窗</a>-->
+          <a class="dropdown-item" href="./technical-indicators.html"><img src="../pic/icon-01.png"> 多空指標</a>
+          <a class="dropdown-item" href="./ai-patterns.html"><img src="../pic/icon-02.png"> AI模型</a>
+          <!--<a class="dropdown-item" href="./dashboard/products-screener.html">熱門商品排行</a>-->
+          <a class="dropdown-item" href="./trades-screener.html"><img src="../pic/icon-03.png"> 漲跌排行</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          數據資料庫
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!--<a class="dropdown-item" href="#">經濟數據</a>-->
+          <!--<a class="dropdown-item" href="#">籌碼資料</a>-->
+          <a class="dropdown-item" href="../ecodatabase/event-calendar.html"><img src="../pic/icon-13.png"> 財經日曆</a>
+          <a class="dropdown-item" href="../ecodatabase/event-research.html"><img src="../pic/icon-14.png"> 事件分析研究</a>
+          <a class="dropdown-item" href="../ecodatabase/holiday-calendar.html"><img src="../pic/icon-05.png"> 假期公告</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../learningmap.html">學習地圖</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">關於我們</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜尋</button>
+    </form>
+  </div>
+</nav>
+  <!-- 導覽列結束 -->
+
+  <!--highcharts-->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script>
+//$.getJSON( "http://127.0.0.1:8080/api/sort/?format=json", function( data ) {
+//  console.log(data);
+//});
+$.getJSON('https://web20191122.azurewebsites.net/ai_reg/?format=json', function (data) {
+
+    Highcharts.setOptions({
+    time: {
+        timezoneOffset: -8*60
+    }
+    });
+    // create the chart
+    Highcharts.stockChart('hicharts0', {
+
+
+        rangeSelector: {
+            selected: 1
+        },
+
+        title: {
+            text: data.stronglong1.stock_name
+        },
+
+        series: [{
+            type: 'candlestick',
+            name: data.stronglong1.stock_name,
+            data: data.stronglong1.data,
+            dataGrouping: {
+                units: [
+                    [
+                        'day', // unit name
+                        [1] // allowed multiples
+                    ], [
+                        'month',
+                        [1, 2, 3, 4, 6]
+                    ]
+                ]
+            }
+        }]
+    });
+
+    Highcharts.stockChart('hicharts1', {
+
+
+        rangeSelector: {
+            selected: 1
+        },
+
+        title: {
+            text: data.stronglong2.stock_name
+        },
+
+        series: [{
+            type: 'candlestick',
+            name: data.stronglong2.stock_name,
+            data: data.stronglong2.data,
+            dataGrouping: {
+                units: [
+                    [
+                        'day', // unit name
+                        [1] // allowed multiples
+                    ], [
+                        'month',
+                        [1, 2, 3, 4, 6]
+                    ]
+                ]
+            }
+        }]
+    });     
+
+    Highcharts.stockChart('hicharts2', {
+
+
+        rangeSelector: {
+            selected: 1
+        },
+
+        title: {
+            text: data.stronglong3.stock_name
+        },
+
+        series: [{
+            type: 'candlestick',
+            name: data.stronglong3.stock_name,
+            data: data.stronglong3.data,
+            dataGrouping: {
+                units: [
+                    [
+                        'day', // unit name
+                        [1] // allowed multiples
+                    ], [
+                        'month',
+                        [1, 2, 3, 4, 6]
+                    ]
+                ]
+            }
+        }]
+    });
+
+});
+/*
+$.getJSON('https://pfcfactweb.azurewebsites.net/ai_reg/?format=json', function (data) {
+    console.log(data);
+    // create the chart
+    Highcharts.stockChart('hicharts1', {
+
+
+        rangeSelector: {
+            selected: 1
+        },
+
+        title: {
+            text: data.stronglong2.stock_name
+        },
+
+        series: [{
+            type: 'candlestick',
+            name: data.stronglong2.stock_name,
+            data: data.stronglong2.data,
+            dataGrouping: {
+                units: [
+                    [
+                        'day', // unit name
+                        [1] // allowed multiples
+                    ], [
+                        'month',
+                        [1, 2, 3, 4, 6]
+                    ]
+                ]
+            }
+        }]
+    });
+});
+
+
+$.getJSON('https://pfcfactweb.azurewebsites.net/ai_reg/?format=json', function (data) {
+    console.log(data);
+    // create the chart
+    Highcharts.stockChart('hicharts2', {
+
+
+        rangeSelector: {
+            selected: 1
+        },
+
+        title: {
+            text: data.stronglong3.stock_name
+        },
+
+        series: [{
+            type: 'candlestick',
+            name: data.stronglong3.stock_name,
+            data: data.stronglong3.data,
+            dataGrouping: {
+                units: [
+                    [
+                        'day', // unit name
+                        [1] // allowed multiples
+                    ], [
+                        'month',
+                        [1, 2, 3, 4, 6]
+                    ]
+                ]
+            }
+        }]
+    });
+});*/
+</script>
+
+<!--highcharts-->
+<main role="main" class="flex-shrink-0">
+
+  <section class="jumbotron text-center" style="background-image:url(./pic/ai_banner01.png) ; background-size:100%;">
+    <div class="container">
+      <h1 class="jumbotron-heading" style="color:#FFFFFF">AI型態辨識模型</h1>
+      <p style="color: #ffffff">利用深度學習-卷積神經網路技術訓練歷史資料線圖，自動偵測辨識出目前海內外期貨商品行情正在發生的型態</p>
+      <p>
+
+      </p>
+    </div>
+  </section>
+
+    <div class="container">
+
+
+    <div class="row">
+      <div class="col-md-6">
+            <div id="hicharts0" style="height: 400px; min-width: 310px"></div>
+      </div>
+      <div class="col-md-6"><figure class="highcharts-figure">
+    <div id="pie0"></div>
+</figure>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">日期</th>
+      <th scope="col">外資</th>
+      <th scope="col">投信</th>
+      <th scope="col">自營商</th>
+      <th scope="col">總計</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+    </div>
+<hr class="featurette-divider"> 
+
+    <div class="row">
+      <div class="col-md-6">
+            <div id="hicharts1" style="height: 400px; min-width: 310px"></div>
+      </div>
+      <div class="col-md-6"><figure class="highcharts-figure">
+    <div id="pie1"></div>
+</figure>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">日期</th>
+      <th scope="col">外資</th>
+      <th scope="col">投信</th>
+      <th scope="col">自營商</th>
+      <th scope="col">總計</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table></div>
+    </div>
+<hr class="featurette-divider"> 
+
+    <div class="row">
+      <div class="col-md-6">
+            <div id="hicharts2" style="height: 400px; min-width: 310px"></div>
+      </div>
+      <div class="col-md-6"><figure class="highcharts-figure">
+    <div id="pie2"></div>
+
+</figure>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">日期</th>
+      <th scope="col">外資</th>
+      <th scope="col">投信</th>
+      <th scope="col">自營商</th>
+      <th scope="col">總計</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table></div>
+    </div>
+  </div>
+<script type="text/javascript"> // Make monochrome colors
+var pieColors = (function () {
+    var colors = [],
+        base = Highcharts.getOptions().colors[0],
+        i;
+
+    for (i = 0; i < 10; i += 1) {
+        // Start out with a darkened base color (negative brighten), and end
+        // up with a much brighter color
+        colors.push(Highcharts.Color(base).brighten((i - 3) / 7).get());
+    }
+    return colors;
+}());
+
+// Build the chart
+Highcharts.chart('pie0', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Browser market shares at a specific website, 2014'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            colors: pieColors,
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
+                distance: -50,
+                filter: {
+                    property: 'percentage',
+                    operator: '>',
+                    value: 4
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Share',
+        data: [
+            { name: 'Chrome', y: 61.41 },
+            { name: 'Internet Explorer', y: 11.84 },
+            { name: 'Firefox', y: 10.85 },
+            { name: 'Edge', y: 4.67 },
+            { name: 'Safari', y: 4.18 },
+            { name: 'Other', y: 7.05 }
+        ]
+    }]
+});
+Highcharts.chart('pie1', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Browser market shares at a specific website, 2014'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            colors: pieColors,
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
+                distance: -50,
+                filter: {
+                    property: 'percentage',
+                    operator: '>',
+                    value: 4
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Share',
+        data: [
+            { name: 'Chrome', y: 61.41 },
+            { name: 'Internet Explorer', y: 11.84 },
+            { name: 'Firefox', y: 10.85 },
+            { name: 'Edge', y: 4.67 },
+            { name: 'Safari', y: 4.18 },
+            { name: 'Other', y: 7.05 }
+        ]
+    }]
+});
+Highcharts.chart('pie2', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Browser market shares at a specific website, 2014'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            colors: pieColors,
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
+                distance: -50,
+                filter: {
+                    property: 'percentage',
+                    operator: '>',
+                    value: 4
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Share',
+        data: [
+            { name: 'Chrome', y: 61.41 },
+            { name: 'Internet Explorer', y: 11.84 },
+            { name: 'Firefox', y: 10.85 },
+            { name: 'Edge', y: 4.67 },
+            { name: 'Safari', y: 4.18 },
+            { name: 'Other', y: 7.05 }
+        ]
+    }]
+});
+</script>
+
+</main>
+<hr class="featurette-divider"> 
+
+
+  <!-- FOOTER -->
+<footer class="footer mt-auto py-3" style="background-color: #E2E2E2">
+  <div class="container">
+  <div class="row">
+    <div class="col-12 col-md">
+
+      <small class="d-block mb-3" style="color: #959696">統一期貨 &copy; 2019</small>
+      <a href="https://www.facebook.com/president.futures/"><img src="../pic/fb.png"></a>
+      <a href="https://line.me/R/ti/p/%40bbu3616b"><img src="../pic/line.png"></a>
+      <a href="https://www.youtube.com/channel/UCaJSetiZxHhUdYksIjr-yfw"><img src="../pic/youtube.png"></a>
+      <a href="https://www.youtube.com/channel/UCaJSetiZxHhUdYksIjr-yfw"><img src="../pic/ig.png"></a>
+    </div>
+    <div class="col-6 col-md">
+      <h5 style="color: #959696">-期貨看盤室-</h5>
+      <ul class="list-unstyled text-small">
+        <!--<li><a class="text-white" href="./dashboard/techanalysis.html">技術線圖</a></li>-->
+        <li><a href="./technical-indicators.html"><img src="../pic/icon-01.png"> 多空指標</a></li>
+        <li><a href="./ai-patterns.html"><img src="../pic/icon-02.png"> AI模型</a></li>
+        <!--<li><a class="text-white" href="./dashboard/products-screener.html">熱門商品排行</a></li>-->
+        <li><a href="./trades-screener.html"><img src="../pic/icon-03.png"> 漲跌排行</a></li>
+
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5 style="color: #959696">-數據資料庫-</h5>
+      <ul class="list-unstyled">
+        <!--<li><a class="text-white" href="#">經濟數據</a></li>-->
+        <!--<li><a class="text-white" href="#">籌碼資料</a></li>-->
+        <li><a href="../ecodatabase/event-calendar.html"><img src="../pic/icon-13.png"> 財經日曆</a></li>
+        <li><a href="../ecodatabase/event-research.html"><img src="../pic/icon-14.png"> 事件研究分析</a></li>
+        <li><a href="../ecodatabase/holiday-calendar.html"><img src="../pic/icon-05.png"> 假期公告</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5 style="color: #959696">-學習地圖-</h5>
+      <ul class="list-unstyled">
+        <li><a href="../learningmap.html"><img src="../pic/icon-06.png"> 認識期權</a></li>
+        <li><a href="../learningmap.html"><img src="../pic/icon-07.png"> 程式交易介紹</a></li>
+        <li><a href="../learningmap.html"><img src="../pic/icon-08.png"> 國際市場分析</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5 style="color: #959696">-關於我們-</h5>
+      <ul class="list-unstyled text-small">
+        <li><a href="#"><img src="../pic/icon-09.png"> Team</a></li>
+        <li><a href="#"><img src="../pic/icon-10.png"> Locations</a></li>
+        <li><a href="#"><img src="../pic/icon-11.png"> Privacy</a></li>
+        <li><a href="#"><img src="../pic/icon-12.png"> Terms</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row text-muted">
+  網站內提供之數據資料、分析工具、網誌內容僅供使用者作為參考，實際數據以官方公佈資料為準。任何交易行為須自行判斷並承擔風險，本網站不負擔盈虧之法律責任。歡迎分享本網站提供之資訊連結，如需轉載內容務必經由本公司同意。</div>
+</div>
+</footer>
+  <!-- FOOTER結束 -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    </body>
+</html>

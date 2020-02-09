@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="160字左右內網站描述，***重要!">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>統一期貨-技術指標走勢</title><!-- 為每個頁面設定唯一的標題 -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/navbar-fixed/">
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family==Noto+Sans+TC&display=swap">
+    <!-- fontawesome icon -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+    <style>
+
+      body{
+        background-color: #FFFAFA;
+        font-family: 'Noto Sans TC regular','Microsoft JhengHei', sans-serif;
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      #div1{
+        width: 400px;
+        float: left;
+        margin-right: 20px; 
+      }
+      #div2{
+        width: 400px;
+        float: left;
+      }
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body class="d-flex flex-column h-100">
+  <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light shadow">
+  <a class="navbar-brand" href="https://www.pfcf.com.tw/"><img src="../pic/futures_06.png" alt="統一期貨" width="117"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto ">
+      <li class="nav-item active">
+        <a class="nav-link" href="../index.html">首頁 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          期貨看盤室
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!--<a class="dropdown-item" href="./dashboard/technical-analysis.html">**商品櫥窗</a>-->
+          <a class="dropdown-item" href="./dashboard/technical-indicators.html"><img src="../pic/icon-01.png"> 多空指標</a>
+          <a class="dropdown-item" href="./dashboard/ai-patterns.html"><img src="../pic/icon-02.png"> AI模型</a>
+          <!--<a class="dropdown-item" href="./dashboard/products-screener.html">熱門商品排行</a>-->
+          <a class="dropdown-item" href="./dashboard/trades-screener.html"><img src="../pic/icon-03.png"> 漲跌排行</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          影音文章
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!--<a class="dropdown-item" href="./blog/trading-strategy.html">**交易策略</a>-->
+          <!--<a class="dropdown-item" href="./blog/dailyreport.html">**每日觀點</a>-->
+          <!--<a class="dropdown-item" href="./blog/blog.html">**專題報導</a>-->
+          <a class="dropdown-item" href="./blog/livestream.html"><img src="../pic/icon-04.png"> 線上直播</a>
+          <!--<a class="dropdown-item" href="./blog/vlog.html">VLOG</a>-->
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          數據資料庫
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!--<a class="dropdown-item" href="#">經濟數據</a>-->
+          <!--<a class="dropdown-item" href="#">籌碼資料</a>-->
+          <a class="dropdown-item" href="#"><img src="../pic/icon-13.png"> 財經日曆</a>
+          <a class="dropdown-item" href="./ecodatabase/event-research.html"><img src="../pic/icon-14.png"> 事件分析研究</a>
+          <a class="dropdown-item" href="./ecodatabase/holiday-calendar.html"><img src="../pic/icon-05.png"> 假期公告</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./learningmap.html">學習地圖</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">關於我們</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜尋</button>
+    </form>
+  </div>
+</nav>
+  <!-- 導覽列結束 -->
+
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+  <div class="d-flex align-items-center p-3 my-3 text-black-50 rounded shadow-sm">
+    <div class="lh-100">
+      <h5><i class="fas fa-chart-line" style="color: #e60012"></i><B> 技術指標分析 </B></h5>
+      <small style="color:orange">Technical Indicators</small>
+    </div>
+  </div>
+
+<img src="./a1.png" width="1134">
+<img src="./a2.png" width="1134">
+
+
+
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#home" data-toggle="tab">
+       指數商品
+    </a>
+  </li>
+  <li>
+    <a href="#ios" data-toggle="tab">
+    能源商品
+    </a>
+  </li>
+  <li>
+    <a href="#jmeter" data-toggle="tab">
+    金屬商品
+    </a>
+  </li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade show active" id="home">
+    
+<div id="div1">
+<br><b>小道瓊</b></br>
+<table class="table table-sm table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">指標</th>
+      <th scope="col">值</th>
+      <th scope="col">狀態</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RSI(14)</td>
+      <td>67.5</td>
+      <td>Buy</td>
+    </tr>
+    <tr>
+      <td>STOCH(9,6)</td>
+      <td>43.305</td>
+      <td>Sell</td>
+    </tr>
+    <tr>
+      <td>MACD(12,26)</td>
+      <td>4.600</td>
+      <td>Neutral</td>
+    </tr>
+  </tbody>
+</table>
+<br><b>A50</b></br>
+<table class="table table-sm table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">指標</th>
+      <th scope="col">值</th>
+      <th scope="col">狀態</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RSI(14)</td>
+      <td>76</td>
+      <td>Buy</td>
+    </tr>
+    <tr>
+      <td>STOCH(9,6)</td>
+      <td>69.87</td>
+      <td>Buy</td>
+    </tr>
+    <tr>
+      <td>MACD(12,26)</td>
+      <td>9</td>
+      <td>Neutral</td>
+    </tr>
+  </tbody>
+</table>
+<br><b>恆生指數</b></br>
+<table class="table table-sm table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">指標</th>
+      <th scope="col">值</th>
+      <th scope="col">狀態</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RSI(14)</td>
+      <td>45.28</td>
+      <td>Neutral</td>
+    </tr>
+    <tr>
+      <td>STOCH(9,6)</td>
+      <td>43.305</td>
+      <td>Sell</td>
+    </tr>
+    <tr>
+      <td>MACD(12,26)</td>
+      <td>7.76</td>
+      <td>Neutral</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+  <div class="tab-pane fade" id="ios">
+
+<div id="div2">
+<br><b>輕原油</b></br>
+<table class="table table-sm table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">指標</th>
+      <th scope="col">值</th>
+      <th scope="col">狀態</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RSI(14)</td>
+      <td>28.37</td>
+      <td>Sell</td>
+    </tr>
+    <tr>
+      <td>STOCH(9,6)</td>
+      <td>34.2</td>
+      <td>Sell</td>
+    </tr>
+    <tr>
+      <td>MACD(12,26)</td>
+      <td>2.1</td>
+      <td>Sell</td>
+    </tr>
+  </tbody>
+</table>
+<br><b>布倫特油</b></br>
+<table class="table table-sm table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">指標</th>
+      <th scope="col">值</th>
+      <th scope="col">狀態</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RSI(14)</td>
+      <td>77.5</td>
+      <td>Buy</td>
+    </tr>
+    <tr>
+      <td>STOCH(9,6)</td>
+      <td>40</td>
+      <td>Sell</td>
+    </tr>
+    <tr>
+      <td>MACD(12,26)</td>
+      <td>4.600</td>
+      <td>Buy</td>
+    </tr>
+  </tbody>
+</table>
+<br><b>輕原油</b></br>
+<table class="table table-sm table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">指標</th>
+      <th scope="col">值</th>
+      <th scope="col">狀態</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RSI(14)</td>
+      <td>55.551</td>
+      <td>Buy</td>
+    </tr>
+    <tr>
+      <td>STOCH(9,6)</td>
+      <td>43.305</td>
+      <td>Sell</td>
+    </tr>
+    <tr>
+      <td>MACD(12,26)</td>
+      <td>4.600</td>
+      <td>Neutral</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+</div>
+
+
+  </div>
+</main>
+<hr class="featurette-divider"> 
+
+
+
+  <!-- FOOTER -->
+<footer class="footer mt-auto py-3" style="background-color: #FFBE60">
+  <div class="container">
+  <div class="row">
+    <div class="col-12 col-md">
+
+      <small class="d-block mb-3" style="color: #555555">統一期貨 &copy; 2019</small>
+      <a href="https://www.facebook.com/president.futures/"><img src="../pic/fb.png"></a>
+      <a href="https://line.me/R/ti/p/%40bbu3616b"><img src="../pic/line.png"></a>
+      <a href="https://www.youtube.com/channel/UCaJSetiZxHhUdYksIjr-yfw"><img src="../pic/youtube.png"></a>
+      <a href="https://www.youtube.com/channel/UCaJSetiZxHhUdYksIjr-yfw"><img src="../pic/ig.png"></a>
+    </div>
+    <div class="col-6 col-md">
+      <h5 style="color: #555555">-期貨看盤室-</h5>
+      <ul class="list-unstyled text-small">
+        <!--<li><a class="text-white" href="./dashboard/techanalysis.html">技術線圖</a></li>-->
+        <li><a href="#" style="color:#555555"><img src="../pic/icon-01.png"> 多空指標</a></li>
+        <li><a href="#" style="color:#555555"><img src="../pic/icon-02.png"> AI模型</a></li>
+        <!--<li><a class="text-white" href="./dashboard/products-screener.html">熱門商品排行</a></li>-->
+        <li><a href="./dashboard/trades-screener.html" style="color:#555555"><img src="../pic/icon-03.png"> 漲跌排行</a></li>
+
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5 style="color: #555555">-影音文章-</h5>
+      <ul class="list-unstyled text-small">
+        <!--<li><a class="text-white" href="#">交易策略</a></li>-->
+        <!--<li><a class="text-white" href="#">每日觀點</a></li>-->
+        <!--<li><a class="text-white" href="./blog/blog.html">專題報導</a></li>-->
+        <li><a href="#" style="color:#555555"><img src="../pic/icon-04.png"> 線上直播</a></li>
+        <!--<li><a class="text-white" href="#">VLOG</a></li>-->
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5 style="color: #555555">-數據資料庫-</h5>
+      <ul class="list-unstyled">
+        <!--<li><a class="text-white" href="#">經濟數據</a></li>-->
+        <!--<li><a class="text-white" href="#">籌碼資料</a></li>-->
+        <li><a href="./ecodatabase/holiday-calendar.html" style="color:#555555"><img src="../pic/icon-13.png"> 財經日曆</a></li>
+        <li><a href="./ecodatabase/event-research.html" style="color:#555555"><img src="../pic/icon-14.png"> 事件研究分析</a></li>
+        <li><a href="./ecodatabase/holiday-calendar.html" style="color:#555555"><img src="../pic/icon-05.png"> 假期公告</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5 style="color: #555555">-學習地圖-</h5>
+      <ul class="list-unstyled">
+        <li><a href="./learningmap.html" style="color:#555555"><img src="../pic/icon-06.png"> 認識期權</a></li>
+        <li><a href="./learningmap.html" style="color:#555555"><img src="../pic/icon-07.png"> 程式交易介紹</a></li>
+        <li><a href="./learningmap.html" style="color:#555555"><img src="../pic/icon-08.png"> 國際市場分析</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5 style="color: #555555">-關於我們-</h5>
+      <ul class="list-unstyled text-small">
+        <li><a href="#" style="color:#555555"><img src="../pic/icon-09.png"> Team</a></li>
+        <li><a href="#" style="color:#555555"><img src="../pic/icon-10.png"> Locations</a></li>
+        <li><a href="#" style="color:#555555"><img src="../pic/icon-11.png"> Privacy</a></li>
+        <li><a href="#" style="color:#555555"><img src="../pic/icon-12.png"> Terms</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row text-muted">
+  網站內提供之數據資料、分析工具、網誌內容僅供使用者作為參考，實際數據以官方公佈資料為準。任何交易行為須自行判斷並承擔風險，本網站不負擔盈虧之法律責任。歡迎分享本網站提供之資訊連結，如需轉載內容務必經由本公司同意。</div>
+</div>
+</footer>
+  <!-- FOOTER結束 -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    </body>
+</html>
