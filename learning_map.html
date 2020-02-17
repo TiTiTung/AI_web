@@ -1,0 +1,376 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Carousel Template · Bootstrap</title>
+
+    <script type="text/javascript" nonce="ea7e781e1f4647a98e1f462ee18" src="//local.adguard.org?ts=1577163447687&amp;type=content-script&amp;dmn=getbootstrap.com&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1"></script>
+<script type="text/javascript" nonce="ea7e781e1f4647a98e1f462ee18" src="//local.adguard.org?ts=1577163447687&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+	    h3 {
+	      background: #FFEBCD;
+	      padding:10px;
+	      padding-left: 40px; 
+	      padding-right: 40px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+	    }
+
+    .col-lg-4{
+
+      margin-bottom: 1.5rem;
+      text-align: center;
+
+
+    }      
+
+
+
+
+
+
+		.pricing-header {
+		    max-width: 700px;
+		}
+		.text-center {
+		    text-align: center!important;
+		}
+		@media (min-width: 768px)
+		.pt-md-5, .py-md-5 {
+		    padding-top: 3rem!important;
+		}
+		@media (min-width: 768px)
+		.pb-md-4, .py-md-4 {
+		    padding-bottom: 1.5rem!important;
+		}
+		.ml-auto, .mx-auto {
+		    margin-left: auto!important;
+		}
+		.mr-auto, .mx-auto {
+		    margin-right: auto!important;
+		}
+		.pl-3, .px-3 {
+		    padding-left: 1rem!important;
+		}
+		.pb-3, .py-3 {
+		    padding-bottom: 1rem!important;
+		}
+		.pr-3, .px-3 {
+		    padding-right: 1rem!important;
+		}
+		.pt-3, .py-3 {
+		    padding-top: 1rem!important;
+		}
+		*, ::after, ::before {
+		    box-sizing: border-box;
+		}
+		user agent stylesheet
+		div {
+		    display: block;
+		}
+
+		.title::after {
+		    content: "";
+		    display: block;
+		    margin: 10px auto 0 0;
+		    width: 4em;
+		    height: 4px;
+		    background: #d48f06;
+		}
+
+		section {
+		    display: block;
+		    padding: 5rem 0;
+
+		}
+
+
+      *{
+        font-family: 微軟正黑體;
+      }
+
+      h4 {
+      display: block;
+      margin-block-start: 1.33em;
+      margin-block-end: 1.33em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+      text-align: center;
+      }
+
+      .secondboard_padding{
+      padding:10px;
+      padding-left: 40px; 
+      padding-right: 40px;
+
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+
+      a:link {
+        color: #959696;
+      }
+      a:visited {
+        color: #959696;
+      }
+      a:hover {
+        color:#F7984B;
+      }
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  
+  <body >
+   <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light shadow">
+  <a class="navbar-brand" href="https://www.pfcf.com.tw/"><img src="pic/futures_06.png" alt="統一期貨" width="117"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto ">
+      <li class="nav-item active">
+        <a class="nav-link" href="./index.html">首頁 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          期貨看盤室
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!--<a class="dropdown-item" href="./dashboard/technical-analysis.html">**商品櫥窗</a>-->
+          <a class="dropdown-item" href="./dashboard/technical-indicators.html"><img src="pic/icon-01.png"> 多空指標</a>
+          <a class="dropdown-item" href="./dashboard/ai-patterns.html"><img src="pic/icon-02.png"> AI模型</a>
+          <!--<a class="dropdown-item" href="./dashboard/products-screener.html">熱門商品排行</a>-->
+          <a class="dropdown-item" href="./dashboard/trades-screener.html"><img src="pic/icon-03.png"> 漲跌排行</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          數據資料庫
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!--<a class="dropdown-item" href="#">經濟數據</a>-->
+          <!--<a class="dropdown-item" href="#">籌碼資料</a>-->
+          <a class="dropdown-item" href="./ecodatabase/event-calendar.html"><img src="pic/icon-13.png"> 財經日曆</a>
+          <a class="dropdown-item" href="./ecodatabase/event-research.html"><img src="pic/icon-14.png"> 事件分析研究</a>
+          <a class="dropdown-item" href="./ecodatabase/holiday-calendar.html"><img src="pic/icon-05.png"> 假期公告</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./learning_map.html">學習地圖</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./about_us.html">關於我們</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜尋</button>
+    </form>
+  </div>
+</nav>
+  <!-- 導覽列結束 -->
+
+
+
+	<section style="background: #FFFAFA;  padding-bottom:0px; " >
+
+		 <div style="background: #FFFAFA; "  class=" mx-auto text-center" >
+		  <h3 class="display-4" style="font-weight: 500; border-bottom: solid 5px #f2c335; ">學習地圖</h3>	</div>
+		
+	<div class="row">
+
+
+	  <div class="jumbotron alert-primary col-lg-4" style="  padding-bottom:160px; margin-bottom: 0px;">
+	    <h1 style="font-weight: 600; ">認識期權</h1>
+	    <hr><br>
+	    <p class="lead" style="font-weight: 500;" > 此處將以深入淺出的方式介紹海內外的期貨商品與選擇權，從最基本的商品介紹與常見交易策略，延伸至細部的量化分析與實戰應用，幫助投資人全面性了解期貨市場。 </p>
+          <a href="https://www.pfcf.com.tw/product"><br>
+          	<button type="button" class="btn btn-primary btn-lg" style="margin-bottom: 10px; " >商品介紹</button></a>
+          <a href="https://www.pfcf.com.tw/product/detail/732">
+          	<button type="button" class="btn btn-primary btn-lg" style="margin-bottom: 10px; " >交易策略</button></a>
+          <a href="https://www.pfcf.com.tw/info">
+          	<button type="button" class="btn btn-primary btn-lg" style="margin-bottom: 10px; " >交易制度</button></a>
+          <a href="https://www.pfcf.com.tw/software">
+          	<button type="button" class="btn btn-primary btn-lg" style="margin-bottom: 10px; " >工具軟體</button> </a>
+
+	          <div >
+	          <br>
+	          <a href="https://www.pfcf.com.tw/report/l/187">
+	          	<button type="button" class="btn btn-primary btn-lg" >數據分析</button></a> 
+	          <a href="https://www.pfcf.com.tw/featured/l/203">
+	          	<button type="button" class="btn btn-primary btn-lg" >實戰應用</button></a> 
+	          </div>
+
+
+	  </div>
+
+
+
+	  <div class="jumbotron  alert-danger  col-lg-4" style="  padding-bottom:160px; margin-bottom: 0px;">
+	    <h1 style="font-weight: 600;">程式交易介紹</h1>
+	    <hr><br>
+	    <p class="lead" style="font-weight: 500 ">MultiCharts程式交易系統提供方便且快速的回測平台，投資人可檢驗自身交易策略與投資思維，進一步優化投組策略。統一期貨在以下連結中，提供基礎語法、策略開發的完整教學。</p><br>
+
+          <a href="#">
+          	<button type="button" class="btn btn-danger btn-lg" disabled style="margin-bottom: 10px; " >基礎語法</button></a>
+          <a href="#">
+          	<button type="button" class="btn btn-danger btn-lg" disabled style="margin-bottom: 10px; " >功能與介面</button></a>
+          <a href="https://www.pfcf.com.tw/featured/l/202?page=1">
+          	<button type="button" class="btn btn-danger btn-lg" style="margin-bottom: 10px; " >常見指標與策略</button></a>
+<!-- 	          <div>
+	          <br> -->
+	          <a href="#">
+	          	<button type="button" class="btn btn-danger btn-lg" disabled style="margin-bottom: 10px; " >進階應用</button></a>
+	          <!-- </div> -->
+	  </div>
+
+
+
+
+	  <div class="jumbotron  alert-success  col-lg-4" style="  padding-bottom:160px; margin-bottom: 0px;">
+	    <h1 style="font-weight: 600;">國際市場分析</h1>
+	    <hr><br>
+	    <p class="lead" style="font-weight: 500 "> 統一期貨提供即時、精闢的全球總經分析，解析重大國際事件對於各類商品的衝擊，例如 : 中美貿易戰之下美股走勢評析、脫歐對於英鎊的衝擊、負利率時代持有黃金成本降低等等。 </p><br>
+          <a href="#">
+          	<button type="button" class="btn btn-success btn-lg" disabled>熱門商品追蹤</button></a>
+          <a href="https://www.pfcf.com.tw/featured/l/201">
+          	<button type="button" class="btn btn-success btn-lg">重點事件導讀</button></a>
+	</div>
+
+	</div>
+
+
+	</section>
+
+
+
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+  <footer class="footer mt-auto py-3" style="background-color: #E2E2E2">
+    <div class="container">
+    <div class="row">
+      <div class="col-12 col-md">
+
+        <small class="d-block mb-3" style="color: #959696">統一期貨 © 2019</small>
+        <a href="https://www.facebook.com/president.futures/"><img src="pic/fb.png"></a>
+        <a href="https://line.me/R/ti/p/%40bbu3616b"><img src="pic/line.png"></a>
+        <a href="https://www.youtube.com/channel/UCaJSetiZxHhUdYksIjr-yfw"><img src="pic/youtube.png"></a>
+        <a href="https://www.youtube.com/channel/UCaJSetiZxHhUdYksIjr-yfw"><img src="pic/ig.png"></a>
+      </div>
+      <div class="col-6 col-md">
+        <h5 style="color: #959696">-期貨看盤室-</h5>
+        <ul class="list-unstyled text-small">
+          <!--<li><a class="text-white" href="./dashboard/techanalysis.html">技術線圖</a></li>-->
+          <li><a href="./dashboard/technical-indicators.html"><img src="pic/icon-01.png"> 多空指標</a></li>
+          <li><a href="./dashboard/ai-patterns.html"><img src="pic/icon-02.png"> AI模型</a></li>
+          <!--<li><a class="text-white" href="./dashboard/products-screener.html">熱門商品排行</a></li>-->
+          <li><a href="./dashboard/trades-screener.html"><img src="pic/icon-03.png"> 漲跌排行</a></li>
+
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5 style="color: #959696">-數據資料庫-</h5>
+        <ul class="list-unstyled">
+          <!--<li><a class="text-white" href="#">經濟數據</a></li>-->
+          <!--<li><a class="text-white" href="#">籌碼資料</a></li>-->
+          <li><a href="./ecodatabase/event-calendar.html"><img src="pic/icon-13.png"> 財經日曆</a></li>
+          <li><a href="./ecodatabase/event-research.html"><img src="pic/icon-14.png"> 事件研究分析</a></li>
+          <li><a href="./ecodatabase/holiday-calendar.html"><img src="pic/icon-05.png"> 假期公告</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5 style="color: #959696">-學習地圖-</h5>
+        <ul class="list-unstyled">
+          <li><a href="./learning_map.html"><img src="pic/icon-06.png"> 認識期權</a></li>
+          <li><a href="./learning_map.html"><img src="pic/icon-07.png"> 程式交易介紹</a></li>
+          <li><a href="./learning_map.html"><img src="pic/icon-08.png"> 國際市場分析</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5 style="color: #959696">-關於我們-</h5>
+        <ul class="list-unstyled text-small">
+          <li><a href="./about_us.html"><img src="pic/icon-09.png"> 平台特色</a></li>
+          <li><a href="https://www.pfcf.com.tw/about"><img src="pic/icon-10.png"> 公司介紹</a></li>
+          <li><a href="https://www.pfcf.com.tw/about/detail/156"><img src="pic/icon-11.png"> 聯絡我們</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row text-muted">
+    網站內提供之數據資料、分析工具、網誌內容僅供使用者作為參考，實際數據以官方公佈資料為準。任何交易行為須自行判斷並承擔風險，本網站不負擔盈虧之法律責任。歡迎分享本網站提供之資訊連結，如需轉載內容務必經由本公司同意。</div>
+  </div>
+  </footer>
+
+
+
+  <!-- FOOTER結束 -->
+
+
+
+
+
+</main>
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+

@@ -211,7 +211,7 @@ height: 100%;}
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto ">
       <li class="nav-item active">
-        <a class="nav-link" href="#">首頁 <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="./index.html">首頁 <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -220,9 +220,6 @@ height: 100%;}
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <!--<a class="dropdown-item" href="./dashboard/technical-analysis.html">**商品櫥窗</a>-->
           <a class="dropdown-item" href="./dashboard/technical-indicators.html"><img src="pic/icon-01.png"> 多空指標</a>
-          	<ul>
-          		<li>141874984</li>
-          	</ul>
           <a class="dropdown-item" href="./dashboard/ai-patterns.html"><img src="pic/icon-02.png"> AI模型</a>
           <!--<a class="dropdown-item" href="./dashboard/products-screener.html">熱門商品排行</a>-->
           <a class="dropdown-item" href="./dashboard/trades-screener.html"><img src="pic/icon-03.png"> 漲跌排行</a>
@@ -241,10 +238,10 @@ height: 100%;}
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="./learningmap.html">學習地圖</a>
+        <a class="nav-link" href="./learning_map.html">學習地圖</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">關於我們</a>
+        <a class="nav-link " href="./about_us.html">關於我們</a>
       </li>
     </ul>
     <form class="form-inline mt-2 mt-md-0">
@@ -445,7 +442,7 @@ $('#polar').click(function () {
 <div id="pricerank2"  style="width: 600px; height: 400px; margin: 0 auto"></div>
 </div>
 <script type="text/javascript">
-Highcharts.getJSON('https://web20191122.azurewebsites.net/homeapi/absolute?format=json', function (data) {
+Highcharts.getJSON('http:/43.254.16.178/homeapi/absolute?format=json', function (data) {
   var chart = Highcharts.chart('pricerank2', {
     title: {
         text: '海外期貨排行'
@@ -585,21 +582,21 @@ initializeClock('clockdiv', deadline);
 <header></header>
 </div>
 
-<!-- <div class="card shadow-sm" style="margin: 0px auto;">
-  <div class="card-header">
-    <h6 class="my-0 font-weight-normal">發布時間: 12/2 23:00</h6>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">ISM製造業指數(美國)</h5>
-    <ul class="list-unstyled">
-      <li>數據期間: 11月(月數據)</li>
-      <li>實際值: 48.1</li>
-      <li>預估值: 49.2</li>
-      <li>前值: 48.3</li>
-      <li>結果: 低於預期</li>
-    </ul>
-  </div>
-</div> -->
+<!--     <div class="card shadow-sm" style="margin: 0px auto;">
+      <div class="card-header">
+        <h6 class="my-0 font-weight-normal">發布時間: 12/2 23:00</h6>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">ISM製造業指數(美國)</h5>
+        <ul class="list-unstyled">
+          <li>數據期間: 11月(月數據)</li>
+          <li>實際值: 48.1</li>
+          <li>預估值: 49.2</li>
+          <li>前值: 48.3</li>
+          <li>結果: 低於預期</li>
+        </ul>
+      </div>
+    </div> -->
     <section id="carouselExampleControls" class="carousel slide " data-ride="carousel" style="margin: 0px auto;">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -653,7 +650,9 @@ initializeClock('clockdiv', deadline);
             </div>
           </div>
         </div>
-      </div>
+      </div>      
+ 
+
 
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -842,7 +841,7 @@ initializeClock('clockdiv', deadline);
 
 <script>
     $(document).ready(function (){
-            $.getJSON('https://web20191122.azurewebsites.net/homeapi/absolute?format=json', function (data) {
+            $.getJSON('http:/43.254.16.178/homeapi/absolute?format=json', function (data) {
               
               for(var j=0;j<6;j++){
                 var classfy = Object.keys(data.quote)[j];
@@ -1004,18 +1003,17 @@ Highcharts.chart('container', {
     <div class="col-6 col-md">
       <h5 style="color: #959696">-學習地圖-</h5>
       <ul class="list-unstyled">
-        <li><a href="./learningmap.html"><img src="pic/icon-06.png"> 認識期權</a></li>
-        <li><a href="./learningmap.html"><img src="pic/icon-07.png"> 程式交易介紹</a></li>
-        <li><a href="./learningmap.html"><img src="pic/icon-08.png"> 國際市場分析</a></li>
+          <li><a href="./learning_map.html"><img src="pic/icon-06.png"> 認識期權</a></li>
+          <li><a href="./learning_map.html"><img src="pic/icon-07.png"> 程式交易介紹</a></li>
+          <li><a href="./learning_map.html"><img src="pic/icon-08.png"> 國際市場分析</a></li>
       </ul>
     </div>
     <div class="col-6 col-md">
       <h5 style="color: #959696">-關於我們-</h5>
       <ul class="list-unstyled text-small">
-        <li><a href="#"><img src="pic/icon-09.png"> Team</a></li>
-        <li><a href="#"><img src="pic/icon-10.png"> Locations</a></li>
-        <li><a href="#"><img src="pic/icon-11.png"> Privacy</a></li>
-        <li><a href="#"><img src="pic/icon-12.png"> Terms</a></li>
+          <li><a href="./about_us.html"><img src="pic/icon-09.png"> 平台特色</a></li>
+          <li><a href="https://www.pfcf.com.tw/about"><img src="pic/icon-10.png"> 公司介紹</a></li>
+          <li><a href="https://www.pfcf.com.tw/about/detail/156"><img src="pic/icon-11.png"> 聯絡我們</a></li>
       </ul>
     </div>
   </div>
