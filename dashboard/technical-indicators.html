@@ -142,10 +142,10 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../learningmap.html">學習地圖</a>
+        <a class="nav-link" href="../learning_map.html">學習地圖</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">關於我們</a>
+        <a class="nav-link" href="../about_us.html">關於我們</a>
       </li>
     </ul>
     <form class="form-inline mt-2 mt-md-0">
@@ -176,7 +176,7 @@
 
 <div id="container" style="height: 400px; min-width: 310px"></div>
 <script type="text/javascript">
-    Highcharts.getJSON('https://web20191122.azurewebsites.net/get_quote/txf?format=json', function (data) {
+    Highcharts.getJSON('http:/43.254.16.178/get_quote/txf?format=json', function (data) {
       Highcharts.setOptions({
         time: {
           timezoneOffset: -8*60
@@ -218,7 +218,6 @@
 
 <hr class="featurette-divider"> 
 <header></header>
-<script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/highcharts-more.js"></script>
 <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
 <div class="outer">
@@ -339,7 +338,7 @@
 var a =window.location.href;
 var sPage = a.substring(a.lastIndexOf('/') + 1).split(".");
 console.log(sPage[0]);
-$.getJSON('https://web20191122.azurewebsites.net/trendindicator/txf?format=json', function (data) {
+$.getJSON('http:/43.254.16.178/trendindicator/txf?format=json', function (data) {
 var gaugeOptions = {
 
     chart: {
@@ -521,18 +520,17 @@ $('#trend').find('tr').each(function(index){
     <div class="col-6 col-md">
       <h5 style="color: #959696">-學習地圖-</h5>
       <ul class="list-unstyled">
-        <li><a href="../learningmap.html"><img src="../pic/icon-06.png"> 認識期權</a></li>
-        <li><a href="../learningmap.html"><img src="../pic/icon-07.png"> 程式交易介紹</a></li>
-        <li><a href="../learningmap.html"><img src="../pic/icon-08.png"> 國際市場分析</a></li>
+        <li><a href="../learning_map.html"><img src="../pic/icon-06.png"> 認識期權</a></li>
+        <li><a href="../learning_map.html"><img src="../pic/icon-07.png"> 程式交易介紹</a></li>
+        <li><a href="../learning_map.html"><img src="../pic/icon-08.png"> 國際市場分析</a></li>
       </ul>
     </div>
     <div class="col-6 col-md">
       <h5 style="color: #959696">-關於我們-</h5>
       <ul class="list-unstyled text-small">
-        <li><a href="#"><img src="../pic/icon-09.png"> Team</a></li>
-        <li><a href="#"><img src="../pic/icon-10.png"> Locations</a></li>
-        <li><a href="#"><img src="../pic/icon-11.png"> Privacy</a></li>
-        <li><a href="#"><img src="../pic/icon-12.png"> Terms</a></li>
+        <li><a href="../about_us.html"><img src="../pic/icon-09.png"> 平台特色</a></li>
+        <li><a href="https://www.pfcf.com.tw/about"><img src="../pic/icon-10.png"> 公司介紹</a></li>
+        <li><a href="https://www.pfcf.com.tw/about/detail/156"><img src="../pic/icon-11.png"> 聯絡我們</a></li>
       </ul>
     </div>
   </div>
